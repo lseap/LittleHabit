@@ -1,0 +1,48 @@
+/* pages/today/today.wxss */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 250%;
+  text-align: center;
+}
+
+.look_allHabit {
+  position: relative;
+  left: 30rpx;
+  top: 25rpx;
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+  /* vertical-align: middle; */
+}
+
+.title {
+  position: relative;
+  left: -40rpx;
+}
+
+.get_Card {
+  position: relative;
+  right: 150rpx;
+  top: 25rpx;
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  /* vertical-align: middle; */
+}
+
+.add_Habit {
+  position: relative;
+  right: 20rpx;
+  top: 25rpx;
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  /* vertical-align: middle; */
+}

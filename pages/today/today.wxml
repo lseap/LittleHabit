@@ -1,0 +1,7 @@
+<!--pages/today/today.wxml-->
+<view class="top">
+  <image class="look_allHabit" src="../../image/icon_API.png" bindtap="look_allHabit"></image>
+  <text class="title">今日</text>
+  <image class="get_Card" src="../../image/icon_API.png" bindtap="get_Card"></image>
+  <image class="add_Habit" src="../../image/icon_API.png" bindtap="add_Habit"></image>
+</view>

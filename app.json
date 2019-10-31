@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/today/today",
+    "pages/alarm/alarm",
+    "pages/group/group",
+    "pages/my/my",
+    "pages/allHabit/allHabit",
+    "pages/getCard/getCard",
+    "pages/addHabit/addHabit"
+  ],
+  "window": {
+    "navigationBarTitleText": "小习惯",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0183FD",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/today/today",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "今日"
+      },
+      {
+        "pagePath": "pages/alarm/alarm",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "番茄钟"
+      },
+      {
+        "pagePath": "pages/group/group",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "圈子"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
