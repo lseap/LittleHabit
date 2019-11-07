@@ -1,7 +1,27 @@
 <!--pages/today/today.wxml-->
-<view class="top">
+
+<view wx:if="{{isHide}}">
+  <view wx:if="{{canIUse}}">
+    <view class='header'>
+      <image src='/images/wx_login.png'></image>
+    </view>
+
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+
+
+<view wx:else class="top">
   <image class="look_allHabit" src="../../image/icon_API.png" bindtap="look_allHabit"></image>
-  <text class="title">今日</text>
+  <text class="title">{{title}}</text>
   <image class="get_Card" src="../../image/icon_API.png" bindtap="get_Card"></image>
   <image class="add_Habit" src="../../image/icon_API.png" bindtap="add_Habit"></image>
 </view>

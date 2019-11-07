@@ -4,22 +4,26 @@
     "pages/alarm/alarm",
     "pages/group/group",
     "pages/my/my",
+    "pages/login/login",
     "pages/allHabit/allHabit",
     "pages/getCard/getCard",
-    "pages/addHabit/addHabit"
+    "pages/addHabit/addHabit",
+    "pages/dataStatistics/dataStatistics"
   ],
   "window": {
     "navigationBarTitleText": "小习惯",
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#0183FD",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "color": "#3D3D3D",
+    "selectedColor": "#39D69D",
     "list": [
       {
         "pagePath": "pages/today/today",
         "iconPath": "image/icon_API.png",
-        "selectedIconPath": "image/icon_API_HL.png",
+        "selectedIconPath": "image/icon_今天_selected@2x.png",
         "text": "今日"
       },
       {

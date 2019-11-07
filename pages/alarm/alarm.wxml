@@ -1,2 +1,41 @@
 <!--pages/alarm/alarm.wxml-->
-<text>pages/alarm/alarm.wxml</text>
+<!-- <text>pages/alarm/alarm.wxml</text> -->
+
+<!-- 顶部功能 -->
+<view class="top">
+
+  <!-- 选择音乐--左icon -->
+  <view class="select_Music_Box">
+    <image class="select_Music" src="../../image/icon_API.png"></image>
+  </view>
+
+  <!-- 多标签选项卡 -->
+  <view class="tab_Box">
+    <view class="item1 tab_Item {{currentTab==0?'active':''}}" data-current="0" bindtap="switchNav">正计时</view>
+    <view class="item2 tab_Item {{currentTab==1?'active':''}}" data-current="1" bindtap="switchNav">倒计时</view>
+    <view class="item3 tab_Item {{currentTab==2?'active':''}}" data-current="2" bindtap="switchNav">番茄钟</view>
+  </view>
+
+  <!-- 数据统计--右icon -->
+  <view class="data_Statistics_Box">
+    <image class="data_Statistics" src="../../image/icon_API.png"></image>
+  </view>
+
+</view>
+
+
+<!-- 时钟图标部分 -->
+<view class="circle_Box">
+  <picker-view class="picker" indicator-class="indicator" mask-class="mask" value="{{pickerIndex}}">
+    <picker-view-column>
+      <view wx:for="{{min}}">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{second}}">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <text class="time_text">:</text>
+</view>
+
+<!-- 选择习惯按钮 -->
+<button class="select_Habit" type="primary" size="mini">sss</button>

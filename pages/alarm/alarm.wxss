@@ -1,1 +1,110 @@
 /* pages/alarm/alarm.wxss */
+
+image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.top {
+  position: relative;
+  top: 30rpx;
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.select_Music_Box, .data_Statistics_Box {
+  height: 100rpx;
+  line-height: 110rpx;
+}
+
+.tab_Box {
+  height: 100rpx;
+}
+
+.tab_Item {
+  float: left;
+  padding: 20rpx;
+  border: 1rpx solid black;
+}
+
+.item1 {
+  border-radius: 50rpx 0 0 50rpx;
+}
+
+.item3 {
+  border-radius: 0 50rpx 50rpx 0;
+}
+
+.circle_Box {
+  position: relative;
+  margin: 0 auto;
+  top: 120rpx;
+  width: 400rpx;
+  height: 400rpx;
+  border: 10rpx solid gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  color: gray;
+  background-color: black;
+}
+
+picker-view {
+  color: black;
+  width: 300rpx;
+  height: 250rpx;
+}
+
+.picker {
+  text-align: center;
+  font-size: 100rpx;
+}
+
+.indicator {
+  position: relative;
+  height: 50%;
+}
+
+.indicator::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -1000px;
+}
+
+.indicator::before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -1000px;
+}
+
+.mask {
+  /* border-radius: 15%; */
+  /* overflow: hidden; */
+}
+
+.time_text {
+  position: absolute;
+  top: 50%;
+  margin-top: -50rpx;
+  line-height: 100%;
+  text-align: center;
+  font-size: 100rpx;
+  /* border: 1px solid red; */
+}
+
+.select_Habit {
+  position: relative;
+  top: 150rpx;
+}
