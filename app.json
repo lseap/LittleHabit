@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/today/today",
+    "pages/login/login",
     "pages/alarm/alarm",
     "pages/group/group",
     "pages/my/my",
-    "pages/login/login",
     "pages/allHabit/allHabit",
     "pages/getCard/getCard",
     "pages/addHabit/addHabit",
@@ -14,7 +14,8 @@
     "navigationBarTitleText": "小习惯",
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#3D3D3D",

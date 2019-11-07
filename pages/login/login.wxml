@@ -1,8 +1,5 @@
 <view wx:if="{{isHide}}">
     <view wx:if="{{canIUse}}" >
-        <view class='header'>
-            <image src='/images/wx_login.png'></image>
-        </view>
 
         <view class='content'>
             <view>申请获取以下权限</view>
