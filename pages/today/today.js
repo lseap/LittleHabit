@@ -26,7 +26,7 @@ Page({
     index2: "",
 
     //判断小程序的API，回调，参数，组件等是否在当前版本可用。
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    // canIUse: wx.canIUse('button.open-type.getUserInfo'),
     isHide: false,
 
     title: "今日"
@@ -290,43 +290,6 @@ Page({
         }
       }
     });
-
-    
-
-    // wx.request({
-    //   url: 'https://www.fastmock.site/mock/2b4923992c439086cd1e1b8134accb34/littleHabit/getData',
-    //   success(res) {
-    //     that.setData({
-    //       wcarr: res.data.wcarr,
-    //       carr: res.data.carr
-    //     })
-    //   }
-    // })
-    // var wcarr1 = [];
-    // var carr1 = [];
-    // var dataArr = [];
-    // wx.request({
-    //   url: 'https://lseap.archains.com/habit/getAllUserHabitsTest?userId=1',
-    //   success(res) {
-    //     dataArr = res.data.data;
-    //     // console.log("res.data: ", res.data)
-    //     // console.log("res.data[2]: ", res.data[2])
-    //     for (let i in dataArr){
-    //       if(!dataArr[i].sign){
-    //         wcarr1.push(dataArr[i]);
-    //       }
-    //       else{
-    //         carr1.push(dataArr[i]);
-    //       }
-    //     }
-    //     that.setData({
-    //       wcarr: wcarr1,
-    //       carr: carr1
-    //     })
-    //     console.log("wcarr:",that.data.wcarr)
-    //   }
-    // })
-
   },
 
 
