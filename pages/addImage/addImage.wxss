@@ -1,0 +1,78 @@
+/* pages/addImage/addImage.wxss */
+.addImage_title{
+  width:150rpx;
+  font-size:30rpx;
+  margin: 24rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  line-height:53rpx;
+  color:#BAE6D6;
+  opacity:1;
+}
+
+.addimage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 700rpx;
+  margin: 0rpx auto;
+}
+
+.addscroll{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 700rpx;
+  height: 680rpx;
+  margin: auto;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.image{
+  width: 65rpx;
+  height: 65rpx;
+  margin: 6rpx 1rpx;
+  padding: 5rpx;  
+  border: 1rpx solid #39D69D;
+  border-radius: 50%;
+}
+
+.image1{
+  width: 65rpx;
+  height: 65rpx;
+  margin: 6rpx 1rpx;
+  padding: 5rpx;  
+}
+
+.addimg{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.confirm{
+  width: 556rpx;
+  height: 74rpx;
+  background:#39D69D;
+  opacity:1;
+  border-radius:4rpx;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 74rpx;
+  margin: auto;
+  margin-top: 50rpx;
+}
+
+.imageshow{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 24rpx;
+  border: 1rpx dashed #3D3D3D;
+}
+
+.imgshow{
+  width: 150rpx;
+  height: 150rpx;
+}

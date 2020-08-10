@@ -1,0 +1,15 @@
+<!--pages/mychange/mychange.wxml-->
+<view class="change">
+  <view class="mychangeitem" wx:for="{{changeArr}}">
+    <view class="changeHabitItem" >
+      {{item.date}}
+      <view class="contentItem" wx:for="{{item.content}}" wx:for-item="contentItem" wx:key="{{contentItem}}">
+        <view class="imgborder">
+          <image class="imgitem" src="{{contentItem.img}}"></image>
+        </view>
+         <text>{{contentItem.hcontent}}</text>
+        <text class="time">{{contentItem.time}}</text>
+      </view>
+    </view>
+  </view>
+</view>

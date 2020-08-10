@@ -34,6 +34,13 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    newhabitpicture: null,
+    cardselect: null,
+    dataStatisticsToDataDetails: null,
+    addhabitimg:null,
+    addhabitname: null, 
+    addhabitid: null,
+    header: {'Cookie': ''}
   }
 })

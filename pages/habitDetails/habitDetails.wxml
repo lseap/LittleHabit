@@ -1,0 +1,158 @@
+<!--pages/Calendar/Calendar.wxml-->
+<!-- 打卡日历页面 -->
+<view class='all'>
+  <view class="bar">
+    <!-- 上一个月 -->
+    <view class="previous" bindtap="handleCalendar" data-handle="prev">
+      <!-- ← -->
+      {{'<'}}
+      <!-- <image src='../../image/bg.png '></image> -->
+    </view>
+    <!-- 显示年月 -->
+    <view class="date">{{cur_year}} 年 {{cur_month}} 月</view>
+    <!-- 下一个月 -->
+    <view class="next" bindtap="handleCalendar" data-handle="next">
+      {{'>'}}
+      <!-- <image src='../../image/bg.png'></image> -->
+    </view>
+  </view>
+  <!-- 显示星期 -->
+  <view class="week">
+    <view wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+  </view>
+  <view class="line"></view>
+  <view class='days'>
+    <!-- 列 -->
+    <view class="columns" wx:for="{{days.length/7}}" wx:for-index="i" wx:key="i">
+      <view wx:for="{{days}}" wx:for-index="j" wx:key="j">
+        <!-- 行 -->
+        <view class="rows" wx:if="{{j/7 == i}}">
+          <view class="rows" wx:for="{{7}}" wx:for-index="k" wx:key="k">
+            <!-- 每个月份的空的单元格 -->
+            <view class='cell' wx:if="{{days[j+k].date == null}}">
+              <text decode="{{true}}">&nbsp;&nbsp;</text>
+            </view>
+            <!-- 每个月份的有数字的单元格 -->
+            <view class='cell' wx:else>
+              <!-- 今日未打卡 -->
+              <view wx:if="{{!days[j+k].isSign == true &&''+ cur_year + cur_month + days[j+k].date == today}}" class='cell today'>
+                <text>{{days[j+k].date}}</text>
+              </view>
+              <!-- 今日已打卡 -->
+              <view wx:elif="{{days[j+k].isSign == true && ''+ cur_year + cur_month + days[j+k].date == today}}" class='cell today'>
+                <view class="sign">{{days[j+k].date}}
+                  <view class="dotted-box">
+                    <view class="dotted"></view>
+                  </view>
+                </view>
+              </view>
+              <!-- 当前日期已签到 -->
+              <view wx:elif="{{days[j+k].isSign == true}}" class='cell'>
+                <view class="sign">{{days[j+k].date}}
+                  <view class="dotted-box">
+                    <view class="dotted"></view>
+                  </view>
+                </view>
+              </view>
+              <!-- 当前日期未签到 -->
+              <view wx:else>
+                <text>{{days[j+k].date}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="line"></view>
+
+  <view class="title">打卡统计</view>
+  <view class="statistics_box">
+    <view class="statistics_sbox rightborder">
+      <view class="sdata">{{finish}}</view>
+      <text class="statistics_text">已打卡</text>
+    </view>
+
+    <view class="statistics_sbox rightborder">
+      <view class="sdata">{{ccontinue}}</view>
+      <text class="statistics_text">当前连续打卡</text>
+    </view>
+
+    <view class="statistics_sbox rightborder">
+      <view class="sdata"> {{highcontinue}}</view>
+      <text class="statistics_text">最高连续打卡</text>
+    </view>
+
+    <view class="statistics_sbox">
+      <view class="sdata">{{contribute}}</view>
+      <text class="statistics_text">建立日期</text>
+    </view>
+  </view>
+
+  <view class="title simpleRecord_title">
+    <text>习惯简记</text>
+    <image wx:if="{{toggleFlag}}" class="toggle" src="../../image/icon_hide.png " bindtap="toggle"></image>
+    <image wx:else class="toggle" src="../../image/icon_show.png " bindtap="toggle"></image>
+  </view>
+
+  <view wx:if="{{toggleFlag}}" class="addscroll">
+  <!-- <scroll-view wx:if="{{toggleFlag}}"  scroll-y="true" class="addscroll"> -->
+    <view class="simpleRecord_box" wx:for="{{simpleRecord}}">
+      <view class="simpleRecord_left">
+        <view class="simpleRecord_data">{{item.date}}</view>
+      </view>
+      <!-- <view class="vline"></view> -->
+
+      <view class="simpleRecord_right">
+        <view class="circle"></view>
+        <view class="simpleRecord_content">{{item.content}}</view>
+      </view>
+
+    </view>
+  <!-- </scroll-view> -->
+  </view>
+
+
+  <view class="bottom_btn_box_out">
+    <view class="bottom_btn_box_in">
+      <view class="bottom_btn_flex">
+        <view>
+          <button class="end_btn btn" hover-class="hover" bindtap="endHabit">结束</button>
+        </view>
+        <view>
+          <button class="edit_btn btn" hover-class="hover" bindtap="editRecord">编辑</button>
+        </view>
+        <view>
+          <button class="delete_btn btn" hover-class="hover" bindtap="delHabit">删除</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 遮罩 -->
+<view class="btn_mask" wx:if="{{maskFlag}}"></view>
+
+  <!-- <view class="modal-dialog"> -->
+  <view class="modal-dialog" wx:if="{{simpleRecordFlag}}">
+    <view class="modal-title">简记</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <textarea placeholder-class="input-holder" type="text" maxlength="500" bindinput="inputChange" class="input" >{{simpleRecordContent}}</textarea>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确认</view>
+    </view>
+  </view>
+
+  <view class="cmodal-dialog" wx:if="{{endHabitFlag}}">
+    <view class="cmodal-title">提示</view>
+    <view class="cmodal-content">确定要结束打卡？</view>
+    <view class="modal-footer">
+      <view class="cbtn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="cbtn-confirm" bindtap="conConfirm" data-status="confirm">确认</view>
+    </view>
+  </view>

@@ -1,0 +1,52 @@
+<view class="box">
+  <view class="top_box">
+    <view class="habit_icon_box">
+      <image class="habit_icon" src="{{data.imgPath}}"></image>
+    </view>
+    <view class="middle_text">
+      <view class="habit_content">{{data.imgContent}}</view>
+      <view class="habit_start">从{{data.startDate}}起</view>
+    </view>
+    <view class="right_text">
+      <view class="keep_hours">{{data.keepTime}}</view>
+      <view class="hour_text">小时</view>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="bottom_box">
+    <view class="keepDays_box">
+      <view class="keepDays">{{data.keepDays}}</view>
+      <view class="keepDays_text">坚持天数</view>
+    </view>
+    <view class="avgEveryday_box">
+      <view class="avgEveryday">{{data.avgEveryday}}</view>
+      <view class="avgEveryday_text">平均每天</view>
+    </view>
+    <view class="nearlySevenDays_box">
+      <view class="nearlySevenDays">{{data.nearlySevenDays}}</view>
+      <view class="nearlySevenDays_text">最近7天</view>
+    </view>
+  </view>
+</view>
+
+<view class="display_box">
+
+  <view class="nav_box">
+    <view class="everyday nav {{selectedEverydayTab? 'selectedTab': ''}}" data-current="everyday" bindtap="switchNav">每日投入</view>
+    <view class="everyweek nav {{selectedEveryweekTab? 'selectedTab': ''}}" data-current="everyweek" bindtap="switchNav">每周投入</view>
+    <view class="everymonth nav {{selectedEverymonthTab? 'selectedTab': ''}}" data-current="everymonth" bindtap="switchNav">每月投入</view>
+  </view>
+
+  <!-- <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+    <swiper-item wx:for="{{[0,1,2,3,4,5,6,7,8]}}">
+      {{item}}
+    </swiper-item>
+  </swiper> -->
+
+
+  <view class="canvas_flexbox">
+    <canvas wx:if="{{selectedEverydayTab}}" canvas-id="everyday" disable-scroll="true" class="canvas"></canvas>
+    <canvas wx:if="{{selectedEveryweekTab}}" canvas-id="everyweek" disable-scroll="true" class="canvas"></canvas>
+    <canvas wx:if="{{selectedEverymonthTab}}" canvas-id="everymonth" disable-scroll="true" class="canvas"></canvas>
+  </view>
+</view>

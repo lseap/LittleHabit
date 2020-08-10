@@ -1,0 +1,32 @@
+<!--pages/Resign_card/Resign_card.wxml-->
+<view class="head_title" style="background:url('http://129.204.144.144/habitimg/myself_bg.png');background-repeat: no-repeat;background-size: 100% 100%;">
+  <view class="head">
+    <text class="title">可用补签卡</text>
+    <view class="head_content">
+      <image class="headimg" src="../../img/card_w.png"></image>
+      ×
+      <text class="cardnum">{{cardnum}}</text>
+    </view>
+  </view>
+</view>
+<view class="content">
+  <view class="explain">
+    <view class="line"></view>
+    <text class="little_title">补签卡有什么用？</text>
+    <text class="answer">所有习惯遗漏打卡后，均可使用补签卡进行补签。</text>
+  </view>
+  <view class="getcard">
+    <view class="line"></view>
+    <text class="little_title">获取补签卡</text>
+    <view class="method">
+      <text class="share">分享给好友</text>
+      <view class="share_content">
+        <image class="shareimg" src="../../img/card_G.png"></image>
+        ×
+        <text class="num">1</text>
+      </view>
+      <button class="sharebutton" open-type="share">分享</button>
+    </view>
+  </view>
+</view>
+

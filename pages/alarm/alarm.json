@@ -1,7 +1,7 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "番茄钟",
   "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#0183FD",
-  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
   "usingComponents": {}
 }

@@ -1,2 +1,5 @@
-<!--pages/getCard/getCard.wxml-->
-<text>pages/getCard/getCard.wxml</text>
+<!--pages/getcard/getcard.wxml-->
+<view class="cardDetail">
+  <image class="card" src="{{imgsrc}}"></image>
+</view>
+<view class="confirm" bindtap="confirm">确认</view>

@@ -1,0 +1,19 @@
+<!--pages/addImage/addImage.wxml-->
+<view class="addImage_title">添加习惯</view>
+<scroll-view scroll-y="true" class="addscroll">
+  <view class="addimage">
+  <view class="image-item" wx:for="{{imageArr}}" wx:key='id'>
+    <view class="image1" wx:if = "{{item.status == 0}}" data-index = '{{index}}' bindtap="selectimg">
+      <image class="addimg" src="{{item.img}}"></image>
+    </view>
+    <view class="image" wx:if = "{{item.status == 1}}" data-index = '{{index}}' bindtap="selectimg">
+      <image class="addimg" src="{{item.img}}"></image>
+    </view>
+  </view>
+</view>
+</scroll-view>
+<view class="addImage_title">图标预览</view>
+<view class="imageshow">
+    <image class="imgshow" src="{{imgshow}}"></image>
+</view>
+<view class="confirm" bindtap="confirm_button">确认</view>

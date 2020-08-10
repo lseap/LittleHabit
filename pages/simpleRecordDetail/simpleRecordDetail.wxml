@@ -1,0 +1,15 @@
+<view class="title">共有{{recordNum}}篇习惯简记
+</view>
+
+<view class="simpleRecord_box" wx:for="{{simpleRecord}}">
+  <view class="simpleRecord_left">
+    <view class="simpleRecord_data">{{item.date}}</view>
+  </view>
+  <!-- <view class="vline"></view> -->
+
+  <view class="simpleRecord_right">
+    <view class="circle"></view>
+    <view class="simpleRecord_content">{{item.content}}</view>
+  </view>
+
+</view>

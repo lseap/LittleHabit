@@ -1,1 +1,59 @@
 /* pages/allHabit/allHabit.wxss */
+
+.box {
+  margin: 0 auto;
+  margin-bottom: 25rpx;
+  width: 660rpx;
+  height: 145rpx;
+  border: 1rpx solid rgba(225, 225, 225, 1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 4rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img {
+  width: 110rpx;
+  height: 110rpx;
+  display: inline-block;
+}
+
+.box view {
+  display: inline-block;
+}
+
+.text1 {
+  margin-left: 10rpx;
+}
+
+.text2 {
+  width: 310rpx;
+  text-align: right;
+}
+
+.keep {
+  color: #39d69d;
+}
+
+.text3 {
+  margin-right: 20rpx;
+}
+
+.addbox {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 660rpx;
+  height: 145rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(112, 112, 112, 1);
+  border-radius: 4px;
+}
+
+.addimg {
+  width: 75rpx;
+  height: 75rpx;
+}

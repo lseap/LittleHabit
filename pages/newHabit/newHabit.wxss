@@ -1,0 +1,251 @@
+/* pages/newHabit/newHabit.wxss */
+.habittop{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.habitTap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120rpx;
+  height: 180rpx;
+  margin: auto;
+  padding: 15rpx 20rpx;
+  font-size: 24rpx;
+  color: #3D3D3D;
+}
+
+.habit_img{
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx 10rpx;
+}
+
+.start_time,.end_time{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rpx 32rpx;
+  padding: 30rpx 0 30rpx 0;
+  border-bottom: 1rpx solid #E1E1E1;
+}
+
+.startdata,.enddata{
+  font-size: 30rpx;
+  color: #BAE6D6;
+}
+
+.date_picker{
+  font-size: 30rpx;
+  color: #3D3D3D;
+}
+
+.repeatWeek{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0rpx 32rpx;
+  padding: 30rpx 0 30rpx 0;
+}
+
+.repeatWeek_title{
+  font-size: 30rpx;
+  color: #BAE6D6;
+}
+
+.repeat_choose{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:200rpx;
+  height:48rpx;
+  opacity:1;
+  font-size: 22rpx;
+  border-radius:24rpx;
+  border: 1rpx solid #39D69D;
+  margin-left: 370rpx;
+  overflow: hidden;
+}
+
+.fixedRepeat,.dayRepeat{
+  width:100rpx;
+  height:48rpx;
+  text-align: center;
+  line-height: 48rpx;
+}
+.fixedRepeat{
+  border-right: 1rpx solid #39D69D;
+}
+
+.fixedRepeatShow,.dayRepeatShow{
+  width: 698rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 32rpx;
+  border-bottom: 1rpx solid #E1E1E1;
+  padding: 10rpx 0 32rpx 0;
+}
+
+.fixeditem,.drselect{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
+
+.fixitemct{
+  width: 74rpx;
+  height:74rpx;
+  text-align: center;
+  line-height: 74rpx;
+  border-radius:50%;
+  margin: 0 12rpx;
+  font-size: 22rpx;
+  color: #3D3D3D;
+}
+
+.subday,.addday{
+  width: 58rpx;
+  height:58rpx;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  border-radius:50%;
+  background: #39D69D;
+}
+
+.line{
+  width: 29rpx;
+  height: 4rpx;
+  opacity:1;
+  border-radius:2px; 
+  margin: auto;
+  background: #FFFFFF;
+}
+
+.daynum{
+  width: 110rpx;
+  height: 74rpx;
+  background:#FFFFFF;
+  border:1px solid #39D69D;
+  opacity:1;
+  border-radius:42rpx;
+  margin: 0 26rpx;
+  font-size: 24rpx;
+  color: #3D3D3D;
+  text-align: center;
+  line-height: 74rpx;
+}
+
+.add{
+  width: 29rpx;
+  height: 29rpx;
+  margin: auto;
+}
+
+.remind_time{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rpx 32rpx;
+  padding: 30rpx 0 30rpx 0;
+  border-bottom: 1rpx solid #E1E1E1;
+}
+
+.reminddata{
+  font-size: 30rpx;
+  color: #BAE6D6;
+}
+
+.time_picker{
+  font-size: 30rpx;
+  color: #3D3D3D;
+}
+.clockIn_time{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0rpx 32rpx;
+  padding: 30rpx 0 30rpx 0;
+  border-bottom: 1rpx solid #E1E1E1;
+}
+
+.clockIndata,.popdata{
+  font-size: 30rpx;
+  color: #BAE6D6;
+}
+.clocktime{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.time_picker1{
+  font-size: 30rpx;
+  color: #3D3D3D;
+}
+
+.time_picker2{
+  font-size: 30rpx;
+  color: #3D3D3D;
+}
+
+.popnote{
+  width: 698rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 32rpx;
+  padding: 10rpx 0 32rpx 0;
+}
+
+.popbutton{
+  width: 94rpx;
+  height: 58rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 32rpx 0rpx;
+  border: 1rpx solid #39D69D;
+  opacity:1;
+  border-radius:30rpx;
+}
+
+.pbutton1{
+  width:46rpx;
+  height:46rpx;
+  margin: 5rpx;
+  opacity:1;
+  border-radius:30px;
+}
+
+.pbutton2{
+  width:46rpx;
+  height:46rpx;
+  margin: 5rpx;
+  opacity:1;
+  border-radius:30px;
+}
+
+.confirm{
+  width: 556rpx;
+  height: 74rpx;
+  background:#39D69D;
+  opacity:1;
+  border-radius:4rpx;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 74rpx;
+  margin: auto;
+  margin-top: 100rpx;
+  margin-bottom: 100rpx;
+}

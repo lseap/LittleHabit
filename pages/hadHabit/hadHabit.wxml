@@ -1,0 +1,9 @@
+<!--pages/allHabit/allHabit.wxml-->
+
+<view class="box" wx:for="{{data}}" bindtap="tohadHabitDetail">
+  <image class="img" src="{{item.imgPath}}"></image>
+  <view class="text1">{{item.content}}</view>
+  <view class="text2">已坚持</view>
+  <view class="keep">{{item.keepDays}}</view>
+  <view class="text3">天</view>
+</view>

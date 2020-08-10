@@ -3,19 +3,12 @@
 <view wx:if="{{isHide}}">
   <!-- 背景图片 -->
   <view wx:if="{{canIUse}}">
-    <view style="background:url('../../image/bg.png');background-repeat: no-repeat;background-size: 100% 100%;">
+    <view style="background:url('https://lseap.archains.com/habitimg/bg.png');background-repeat: no-repeat;background-size: 100% 100%;" class="all">
 
-      <view class='header'>
-        <image src='/images/wx_login.png'></image>
-      </view>
+      <image class="logo" src="../../image/logo.png"></image>
 
-      <view class='content'>
-        <view>申请获取以下权限</view>
-        <text>获得你的公开信息(昵称，头像等)</text>
-      </view>
-
-      <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
-        授权登录
+      <button class='authorize' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" >
+        登录
       </button>
 
     </view>
@@ -23,10 +16,66 @@
   <view wx:else>请升级微信版本</view>
 </view>
 
-<view wx:else class="top">
-  <image class="look_allHabit" src="../../image/icon_API.png" bindtap="look_allHabit"></image>
-  <text class="title">{{title}}</text>
-  <image class="get_Card" src="../../image/icon_API.png" bindtap="get_Card"></image>
-  <image class="add_Habit" src="../../image/icon_API.png" bindtap="add_Habit"></image>
-
+<view wx:else class="today">
+  <view class="title">
+    <view class="wait_complement" bindtap="wcbt" >
+      <text class="wcom" style="color:{{wccolor}};border-bottom:{{wcbbt}};" >{{wcom_motto}}</text>
+    </view>
+    <view class="complement" bindtap="cbt">
+      <text class="com" style="color:{{ccolor}};border-bottom:{{cbbt}};">{{com_motto}}</text>
+    </view>
+  </view>
+  <view class="wcomdata" style="display:{{wcdisplay}}">
+    <view class="wcditem" wx:for="{{wcarr}}" data-index = '{{index}}' bindtap="wcditem">
+      <image class="wcimg" src="https://lseap.archains.com/{{item.img}}"></image>
+      <view class="wccontent">{{item.name}}</view>
+      <view class="wctime">{{item.time}}</view>
+    </view>
+  </view>
+  <view class="comdata" style="display:{{cdisplay}}">
+    <view class="cditem" wx:for="{{carr}}" data-index = '{{index}}' bindtap="cditem">
+      <image class="cimg" src="https://lseap.archains.com/{{item.img}}"></image>
+      <view class="ccontent">{{item.name}}</view>
+      <view class="ctime">完成<text class="ctimeNum">{{item.days}}</text>天</view>
+    </view>
+  </view>
+  <view  class="otherbutton" bindtap="othermenu">
+      <image class="other" src="{{ob_road}}" style="width:{{ob_width}};height:{{ob_height}};"></image>
+  </view>
+  <view class="menu_bar" style="display:{{menu_display}}">
+      <view class="menuItem1" bindtap="addHabit">
+          <image class="item1img" src="../../img/addHabit.png"></image>
+          <text class="item1text">添加习惯</text>
+      </view>
+      <view class="menuItem2" bindtap="toallhabit">
+          <image class="item2img" src="../../img/allhabit.png"></image>
+          <text class="item2text">全部习惯</text>
+      </view>
+      <view class="menuItem3" bindtap="getcard">
+          <image class="item3img" src="../../img/getcard.png"></image>
+          <text class="item3text">领取卡片</text>
+      </view>
+  </view>
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">简记</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <textarea placeholder-class="input-holder" type="text" maxlength="500" bindinput="inputChange" class="input" placeholder="对自己说："></textarea>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确认</view>
+    </view>
+  </view>
+  <view class="cmodal-mask" bindtap="chideModal" catchtouchmove="preventTouchMove" wx:if="{{cshowModal}}"></view>
+  <view class="cmodal-dialog" wx:if="{{cshowModal}}">
+    <view class="cmodal-title">提示</view>
+    <view class="cmodal-content">确定要取消打卡？</view>
+    <view class="modal-footer">
+      <view class="cbtn-cancel" bindtap="conCancel" data-status="cancel">取消</view>
+      <view class="cbtn-confirm" bindtap="conConfirm" data-status="confirm">确认</view>
+    </view>
+  </view>
 </view>

@@ -1,3 +1,7 @@
 {
+  "navigationBarTitleText": "数据统计",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
   "usingComponents": {}
 }

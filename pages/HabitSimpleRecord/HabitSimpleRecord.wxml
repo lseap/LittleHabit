@@ -1,0 +1,11 @@
+<!--pages/allHabit/allHabit.wxml-->
+
+<view class="title">共有{{SimpleRecordNum}}篇习惯简记</view>
+
+<view class="box" wx:for="{{data}}" bindtap="tosimpleRecordDetail">
+  <image class="img" src="{{item.imgPath}}"></image>
+  <view class="text1">{{item.content}}</view>
+  <view class="text2">共</view>
+  <view class="keep">{{item.SRNum}}</view>
+  <view class="text3">篇</view>
+</view>

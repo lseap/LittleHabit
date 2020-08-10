@@ -1,0 +1,135 @@
+.box {
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0rpx 4rpx 24rpx 0px rgba(0, 0, 0, 0.06);
+  border-radius: 8rpx;
+}
+
+.top_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45rpx 0;
+  /* border: 1px solid red; */
+}
+
+.habit_icon_box {
+  padding: 0 55rpx;
+  /* border: 1px solid red; */
+}
+
+.habit_icon {
+  width: 65rpx;
+  height: 90rpx;
+}
+
+.middle_text {
+  width: 400rpx;
+  color: #3d3d3d;
+  /* border: 1px solid red; */
+}
+
+.habit_content {
+  font-size: 32rpx;
+}
+
+.habit_start {
+  margin-top: 15rpx;
+  font-size: 26rpx;
+}
+
+.right_text {
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.keep_hours {
+  font-size: 40rpx;
+  color: #39d69d;
+}
+
+.hour_text {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #3d3d3d;
+}
+
+.line {
+  width: 100%;
+  border: 1rpx solid #f6f6f6;
+}
+
+.bottom_box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 45rpx 0;
+  /* border: 1px solid red; */
+}
+
+.keepDays_box, .avgEveryday_box, .nearlySevenDays_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.keepDays, .avgEveryday, .nearlySevenDays {
+  color: #39d69d;
+  font-size: 38rpx;
+}
+
+.keepDays_text, .avgEveryday_text, .nearlySevenDays_text {
+  margin-top: 15rpx;
+  color: #3d3d3d;
+  font-size: 30rpx;
+}
+
+.display_box {
+  width: 650rpx;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.nav_box {
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_box .nav {
+  color: #8a8a8a;
+  font-size: 32rpx;
+  padding-bottom: 10rpx;
+}
+
+.nav_box .selectedTab {
+  color: #39d69d;
+  border-bottom: 3rpx solid #39d69d;
+}
+
+.canvas_flexbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+
+  /* border: 1px solid black; */
+}
+
+.canvas {
+  width: 650rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  height: 500rpx;
+  /* border: 1px solid red; */
+}

@@ -1,1 +1,62 @@
-/* pages/dataStatistics/dataStatistics.wxss */
+.box {
+  width: 690rpx;
+  height: 210rpx;
+  margin: 0 auto;
+  border: 1rpx solid rgba(187, 187, 187, 1);
+  border-radius: 8rpx;
+  margin-top: 30rpx;
+}
+
+.title {
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  color: #999;
+  font-size: 30rpx;
+  /* border: 1px solid red; */
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(57, 214, 157, 1);
+  border-radius: 0rpx 0rpx 8rpx 8rpx;
+}
+
+.icon {
+  width: 150rpx;
+  height: 146rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.img {
+  width: 54rpx;
+  height: 74rpx;
+}
+
+.middle_text {
+  width: 430rpx;
+  color: #666666;
+  font-size: 34rpx;
+  /* border: 1px solid red; */
+}
+
+.keepDays {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+
+.right_text {
+  color: #FFFFFF;
+  font-size: 32rpx;
+  margin-right: 35rpx;
+}
+
+.hours_text {
+  margin-top: 5rpx;
+}

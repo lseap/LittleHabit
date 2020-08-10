@@ -1,1 +1,93 @@
 /* pages/addHabit/addHabit.wxss */
+.customize{
+  border-bottom: 1rpx solid #E1E1E1;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.cusShow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 650rpx;
+  height: 140rpx;
+  margin: 24rpx 32rpx;
+  padding: 15rpx 20rpx;
+  font-size: 22rpx;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.04);
+  border: 1rpx solid #E1E1E1;
+}
+
+.customize_img{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 10rpx;
+}
+
+.recommend{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.health,.study,.play,.work{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.healthTap,.studyTap,.playTap,.workTap{
+  width: 656rpx;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.health_title,.study_title,.play_title,.work_title{
+  font-size:30rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:#BAE6D6;
+  margin-right: 30rpx;
+  opacity:1;
+}
+
+.health_title_img,.study_title_img,.play_title_img,.work_title_img{
+  width: 32rpx;
+  height: 20rpx;
+}
+
+.health_data,.study_data,.play_data,.work_data{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 656rpx;
+  height: 450rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.health_item,.study_item,.play_item,.work_item{
+  width: 120rpx;
+  height: 180rpx;
+  margin: 0rpx 22rpx;
+  text-align: center;
+}
+
+.health_img,.study_img,.play_img,.work_img{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.health_content,.study_content,.play_content,.work_content{
+  width: 120rpx;
+  height: 36rpx;
+  font-size: 24rpx;
+  color: #3D3D3D;
+  font-family:PingFang SC;
+  margin: 10rpx auto 10rpx auto;
+}

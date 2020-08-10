@@ -1,0 +1,13 @@
+/* pages/card_detail/card_detail.wxss */
+.cardDetail{
+  width:560rpx;
+  height:720rpx;
+  border:1rpx solid #707070;
+  margin: 100rpx auto;
+  opacity:1;
+}
+
+.card{
+  width:560rpx;
+  height:720rpx;
+}

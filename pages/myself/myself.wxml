@@ -1,0 +1,41 @@
+<!--pages/myself/myself.wxml-->
+<view class="head_sculpture" style="background:url('http://129.204.144.144/habitimg/myself_bg.png');background-repeat: no-repeat;background-size: 100% 100%;">
+  <view class="head">
+    <image class="head_style" src="../../img/leaf.png"></image>
+    <view class="userinfo">
+      <image bindtap="headbind" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+</view>
+<view class="mycontent">
+  <view class="myfuction">
+    <image class=" imgTitle" src="../../img/medal.png" style="width:80rpx;height:80rpx;"></image>
+    我的勋章
+  </view>
+  <view class="myfuction" bindtap="mychange">
+    <image class=" imgTitle" src="../../img/change.png" style="width:76rpx;height:73rpx;"></image>
+    蜕变记录
+  </view><view class="myfuction" bindtap="mycard">
+    <image class=" imgTitle" src="../../img/cardBag.png" style="width:88rpx;height:60rpx;"></image>
+    我的卡包
+  </view><view class="myfuction" bindtap="toHabitSimpleRecord">
+    <image class=" imgTitle" src="../../img/habitNote.png" style="width:72rpx;height:72rpx;"></image>
+    习惯简记
+  </view><view class="myfuction">
+    <image class=" imgTitle" src="../../img/everyday.png" style="width:72rpx;height:72rpx;"></image>
+    每日随记
+  </view><view class="myfuction">
+    <image class=" imgTitle" src="../../img/Countdown_Day.png" style="width:88rpx;height:60rpx;"></image>
+    倒数日
+  </view><view class="myfuction" bindtap="resign_card">
+    <image class=" imgTitle" src="../../img/Resign_card.png" style="width:88rpx;height:60rpx;"></image>
+    补签卡
+  </view><view class="myfuction" bindtap="tohadHabit">
+    <image class=" imgTitle" src="../../img/Developed_habits.png" style="width:72rpx;height:72rpx;"></image>
+    已养成习惯
+  </view><view class="myfuction">
+    <image class=" imgTitle" src="../../img/Share_Friends.png" style="width:89rpx;height:54rpx;"></image>
+    分享好友
+  </view>
+</view>

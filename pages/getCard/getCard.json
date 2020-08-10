@@ -1,7 +1,8 @@
 {
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "领取卡片",
-  "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#0183FD",
-  "navigationBarTextStyle": "white",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
   "usingComponents": {}
 }

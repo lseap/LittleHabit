@@ -1,1 +1,26 @@
-/* pages/getCard/getCard.wxss */
+/* pages/getcard/getcard.wxss */
+.cardDetail{
+  width:560rpx;
+  height:720rpx;
+  border:1rpx solid #707070;
+  margin: 100rpx auto;
+  opacity:1;
+}
+
+.card{
+  width:560rpx;
+  height:720rpx;
+}
+
+.confirm{
+  width:560rpx;
+  height:74rpx;
+  margin: 100rpx auto;
+  background:#39D69D;
+  opacity:1;
+  border-radius:4rpx;
+  text-align: center;
+  line-height: 64rpx;
+  color: #FFFFFF;
+  font-size: 28rpx;
+}

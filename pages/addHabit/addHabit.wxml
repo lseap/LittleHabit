@@ -1,2 +1,81 @@
 <!--pages/addHabit/addHabit.wxml-->
-<text>pages/addHabit/addHabit.wxml</text>
+<view class="customize">
+  <view class="cusShow" bindtap="cusShow">
+    <image class="customize_img" src="../../img/icons8-tennis-racquet-100.png"></image>
+    自定义习惯
+  </view>
+</view>
+<view class="recommend">
+  <view class="health" wx:if="{{showHealth}}" style="border-bottom:{{health_border}}" >
+    <view class="healthTap" bindtap="health_true">
+      <view class="health_title">健康</view>
+      <image class="health_title_img" src="{{health_title_img}}"></image>
+    </view>
+  </view>
+  <view class="health" wx:else style="border-bottom:{{health_border}}" >
+    <view class="healthTap" bindtap="health_false">
+      <view class="health_title">健康</view>
+      <image class="health_title_img" src="{{health_title_img}}"></image>
+    </view>
+    <view class="health_data">
+        <view class="health_item" wx:for="{{health_arr}}" data-index = '{{index}}' bindtap="health_item">
+          <image class="health_img" src="{{item.img}}"></image>
+          <view class="health_content">{{item.content}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="study" wx:if="{{showStudy}}" style="border-bottom:{{study_border}}" >
+    <view class="studyTap" bindtap="study_true">
+      <view class="study_title">学习</view>
+      <image class="study_title_img" src="{{study_title_img}}"></image>
+    </view>
+  </view>
+  <view class="study" wx:else style="border-bottom:{{study_border}}" >
+    <view class="studyTap"  bindtap="study_false">
+      <view class="study_title">学习</view>
+      <image class="study_title_img" src="{{study_title_img}}"></image>
+    </view>
+    <view class="study_data">
+        <view class="study_item" wx:for="{{study_arr}}" data-index = '{{index}}' bindtap="study_item">
+          <image class="study_img" src="{{item.img}}"></image>
+          <view class="study_content">{{item.content}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="play" wx:if="{{showPlay}}" style="border-bottom:{{play_border}}" >
+    <view class="playTap" bindtap="play_true">
+      <view class="play_title">运动</view>
+      <image class="play_title_img" src="{{play_title_img}}"></image>
+    </view>
+  </view>
+  <view class="play" wx:else style="border-bottom:{{play_border}}" >
+    <view class="playTap"  bindtap="play_false">
+      <view class="play_title">运动</view>
+      <image class="play_title_img" src="{{play_title_img}}"></image>
+    </view>
+    <view class="play_data">
+        <view class="play_item" wx:for="{{play_arr}}" data-index = '{{index}}' bindtap="play_item">
+          <image class="play_img" src="{{item.img}}"></image>
+          <view class="play_content">{{item.content}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="work" wx:if="{{showWork}}" style="border-bottom:{{work_border}}" >
+    <view class="workTap" bindtap="work_true">
+      <view class="work_title">工作</view>
+      <image class="work_title_img" src="{{work_title_img}}"></image>
+    </view>
+  </view>
+  <view class="work" wx:else style="border-bottom:{{work_border}}" >
+    <view class="workTap" bindtap="work_false">
+      <view class="work_title">工作</view>
+      <image class="work_title_img" src="{{work_title_img}}"></image>
+    </view>
+    <view class="work_data">
+        <view class="work_item" wx:for="{{work_arr}}" data-index = '{{index}}' bindtap="work_item">
+          <image class="work_img" src="{{item.img}}"></image>
+          <view class="work_content">{{item.content}}</view>
+        </view>
+    </view>
+  </view>
+</view>

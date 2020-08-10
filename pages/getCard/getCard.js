@@ -1,13 +1,18 @@
-// pages/getCard/getCard.js
+// pages/getcard/getcard.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imgsrc:""
   },
 
+  confirm:function(){
+    wx.navigateBack({
+      
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

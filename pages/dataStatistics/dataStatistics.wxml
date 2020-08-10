@@ -1,2 +1,18 @@
-<!--pages/dataStatistics/dataStatistics.wxml-->
-<text>pages/dataStatistics/dataStatistics.wxml</text>
+<view class="box" wx:for="{{data}}">
+  <view class="title">
+    <view class="startDate">从{{item.startDate}}起</view>
+  </view>
+  <view class="content" data-index="{{index}}" bindtap="gotoDataDetails">
+    <view class="icon">
+      <image class="img" src="{{item.imgPath}}"></image>
+    </view>
+    <view class="middle_text">
+      <view class="imgContent">{{item.imgContent}}</view>
+      <view class="keepDays">已坚持{{item.keepDays}}天</view>
+    </view>
+    <view class="right_text">
+      <view class="keepTime">{{item.keepTime}}</view>
+      <view class="hours_text">小时</view>
+    </view>
+  </view>
+</view>

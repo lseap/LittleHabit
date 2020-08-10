@@ -1,0 +1,4 @@
+<!--pages/card_detail/card_detail.wxml-->
+<view class="cardDetail">
+  <image class="card" src="{{imgsrc}}"></image>
+</view>

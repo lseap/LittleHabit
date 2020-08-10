@@ -1,0 +1,389 @@
+/* pages/Calendar/Calendar.wxss */
+
+.all {
+  font-family: Source Han Sans CN;
+  /* height: 100vh; */
+}
+
+.all .bar {
+  font-size: 34rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.all .previous {
+  padding-left: 60rpx;
+}
+
+.all .next {
+  padding-right: 60rpx;
+}
+
+/* .all .bar image{
+  width: 50rpx;
+  height: 50rpx;
+  border: 1px solid red;
+} */
+
+.all .week {
+  font-size: 30rpx;
+  color: #8a8a8a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 10px;
+}
+
+.line {
+  border: 1px solid rgba(246, 246, 246, 1);
+}
+
+.all .days {
+  font-size: 38rpx;
+  color: #8a8a8a;
+  margin: 20rpx;
+  padding: 0 10rpx;
+  border-radius: 10px;
+  /* background-color: #acd; */
+}
+
+.all .columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.all .columns .rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.all .columns .rows .cell {
+  width: 84rpx;
+  height: 88rpx;
+  margin: 3rpx;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.today {
+  color: white;
+  background-color: #bae6d6;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+}
+
+.dotted-box {
+  position: relative;
+  text-align: center;
+  width: 84rpx;
+}
+
+.dotted {
+  position: relative;
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #39d69d;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.title {
+  position: relative;
+  margin: 25rpx 0;
+  margin-left: 40rpx;
+  font-family: Source Han Sans CN;
+  font-size: 30rpx;
+  color: #bae6d6;
+}
+
+.simpleRecord_title {
+  display: flex;
+  align-items: center;
+}
+
+.toggle {
+  width: 30rpx;
+  height: 15rpx;
+  margin-left: 20rpx;
+  /* display: inline-block; */
+}
+
+.statistics_box {
+  display: flex;
+  width: 90%;
+  height: 140rpx;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  border: 1rpx solid rgba(225, 225, 225, 1);
+  box-shadow: 0px 4rpx 8rpx rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.statistics_sbox {
+  width: 25%;
+  height: 65%;
+  font-size: 24rpx;
+  /* border: 1px solid red; */
+}
+
+.rightborder {
+  border-right: 1px solid #e1e1e1;
+}
+
+.sdata {
+  color: #39d69d;
+  font-size: 30rpx;
+}
+
+.statistics_text {
+  position: relative;
+  top: 10rpx;
+}
+
+.addscroll {
+  width: 100%;
+  /* height: 400rpx; */
+}
+
+.simpleRecord_box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 1px solid red; */
+}
+
+.simpleRecord_left {
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  text-align: center;
+  font-size: 20rpx;
+  color: #8a8a8a;
+  /* border: 1px solid red; */
+}
+
+.simpleRecord_data, .circle {
+  display: inline-block;
+}
+
+.circle {
+  position: absolute;
+  left: -8rpx;
+  top: -1rpx;
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: #39d69d;
+}
+
+.simpleRecord_right {
+  display: inline-block;
+  position: relative;
+  width: 60%;
+  padding-top: 10rpx;
+  padding-bottom: 30rpx;
+  border-left: 1px solid #e1e1e1;
+}
+
+.simpleRecord_content {
+  position: relative;
+  font-size: 20rpx;
+  color: #3d3d3d;
+  padding: 10rpx 20rpx;
+  margin-left: 20rpx;
+  border: 1rpx solid rgba(225, 225, 225, 1);
+  box-shadow: 0rpx 4rpx 8rpx rgba(0, 0, 0, 0.04);
+  border-radius: 8rpx;
+}
+
+.bottom_btn_box_out {
+  /* position: fixed; *//* bottom: 0; */
+  display: flex;
+  align-items: center;
+  /* bottom: 50rpx; */
+  width: 100%;
+  height: 15%;
+  z-index: 1;
+  background-color: white;
+  /* border: 1px solid red; */
+}
+
+.bottom_btn_box_in {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bottom_btn_flex {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  width: 180rpx;
+  height: 70rpx;
+  border: 1rpx solid rgba(186, 230, 214, 1);
+  border-radius: 4rpx;
+  color: #3d3d3d;
+  background-color: white;
+  font-size: 26rpx;
+}
+
+.btn::after {
+  border: none;
+}
+
+.hover {
+  background-color: #39d69d;
+  color: #fff;
+}
+
+.btn_mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.selected_music_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 610rpx;
+  height: 500rpx;
+  margin-top: -250rpx;
+  margin-left: -305rpx;
+  /* margin: 0 auto; */
+  border-radius: 8rpx;
+  /* border: 1px solid red; */
+}
+
+.modal-dialog {
+  width: 480rpx;
+  height: 610rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 250rpx;
+  left: 135rpx;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 4rpx;
+  box-shadow: 0px 0px 6px #e1e1e1;
+}
+
+.modal-title {
+  padding-top: 25rpx;
+  font-size: 36rpx;
+  color: #3d3d3d;
+  font-family: PingFang SC;
+  text-align: center;
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 40rpx;
+}
+
+.modal-input {
+  width: 410rpx;
+  height: 380rpx;
+  display: flex;
+  background: #fff;
+  border: 1rpx solid #e1e1e1;
+  border-radius: 4rpx;
+  font-size: 22rpx;
+}
+
+.input {
+  width: 400rpx;
+  height: 380rpx;
+  font-size: 22rpx;
+  line-height: 22rpx;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+  color: #8a8a8a;
+}
+
+input-holder {
+  color: #8a8a8a;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-cancel, .cbtn-cancel {
+  width: 184rpx;
+  height: 74rpx;
+  color: #3d3d3d;
+  font-size: 30rpx;
+  border: 1rpx solid #bae6d6;
+  opacity: 1;
+  border-radius: 2px;
+  line-height: 74rpx;
+  text-align: center;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+}
+
+.btn-confirm, .cbtn-confirm {
+  width: 184rpx;
+  height: 74rpx;
+  color: #fff;
+  font-size: 30rpx;
+  background: #39d69d;
+  opacity: 1;
+  border-radius: 2px;
+  line-height: 74rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-right: 40rpx;
+}
+
+.cmodal-dialog {
+  width: 480rpx;
+  height: 310rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 250rpx;
+  left: 135rpx;
+  background: #fff;
+  border-radius: 4rpx;
+  box-shadow: 0px 0px 6px #e1e1e1;
+}
+
+.cmodal-title {
+  padding-top: 25rpx;
+  font-size: 34rpx;
+  color: #3d3d3d;
+  font-family: PingFang SC;
+  text-align: center;
+}
+
+.cmodal-content {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  justify-content: center;
+  margin: 40rpx auto;
+}

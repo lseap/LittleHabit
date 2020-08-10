@@ -1,0 +1,7 @@
+<!--pages/mycard/mycard.wxml-->
+<text class="cardtext">共有{{cardnum}}张卡</text>
+<view class="mycard">
+  <view class="carditem" wx:for="{{cardarr}}" wx:key='id'>
+    <image class="cardimg" src="{{item.img}}" data-index = '{{index}}' bindtap="selectimg"></image>
+  </view>
+</view>

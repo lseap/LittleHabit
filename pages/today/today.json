@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTitleText": "小习惯",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {}
+}

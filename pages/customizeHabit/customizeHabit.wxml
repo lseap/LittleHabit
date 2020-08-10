@@ -1,0 +1,94 @@
+<!--pages/customizeHabit/customizeHabit.wxml-->
+<view class="habit_top">
+  <view class="habitTap" bindtap="addimg">
+    <image class="habit_img" src="{{imgsrc}}"></image>
+  </view>
+  <input type="text" placeholder='给新习惯命名' placeholder-class="inithabit" maxlength="50" bindinput="inputChange" class="inputname"></input>
+</view>
+<view class="start_time">
+  <view class="startdata">开始时间</view>
+  <picker mode="date" value="{{start_date}}" start="{{sdate}}" end="{{edate}}" bindchange="bindDateChange">
+      <view class="date_picker">
+        {{start_date}}
+      </view>
+  </picker>
+</view>
+<view class="end_time">
+  <view class="enddata">结束时间</view>
+  <picker mode="date" value="{{end_date}}" start="{{sdate}}" end="{{edate}}" bindchange="bindDateChange">
+      <view class="date_picker">
+        {{end_date}}
+      </view>
+  </picker>
+</view>
+<view class="repeatWeek">
+  <view class="repeatWeek_title">每周重复</view>
+  <view class="repeat_choose">
+    <view class="fixedRepeat" style="background:{{fixedBc}};color:{{fixedColor}};" bindtap="fixedSelect">固定重复</view>
+    <view class="dayRepeat" style="background:{{dayBc}};color:{{dayColor}};" bindtap="daySelect">天数重复</view>
+  </view>
+</view>
+<view class="fixedRepeatShow" wx:if="{{selectfix}}" >
+  <!--<view class="fixeditem" wx:for="{{weekArr}}" >
+    <view class="fixitemct" wx:if="{{item.dayselect}}" style="border:1px solid #39D69D" bindtap="fixedchoose">{{item.day}}</view>
+    <view class="fixitemct" wx:else style="border:1px solid #E1E1E1" bindtap="fixedchoose" data-index="{{index}}">{{item.day}}</view>
+  </view>-->
+  <view class="fixeditem">
+    <view class="fixitemct" wx:if="{{dayselect1}}" style="border:1px solid #39D69D" bindtap="fixedchoose1">周一</view>
+    <view class="fixitemct" wx:else style="border:1px solid #E1E1E1" bindtap="fixedchoose1">周一</view>
+    <view class="fixitemct" wx:if="{{dayselect2}}" style="border:1px solid #39D69D" bindtap="fixedchoose2">周二</view>
+    <view class="fixitemct" wx:else style="border:1px solid #E1E1E1" bindtap="fixedchoose2">周二</view>
+    <view class="fixitemct" wx:if="{{dayselect3}}" style="border:1px solid #39D69D" bindtap="fixedchoose3">周三</view>
+    <view class="fixitemct" wx:else style="border:1px solid #E1E1E1" bindtap="fixedchoose3">周三</view>
+    <view class="fixitemct" wx:if="{{dayselect4}}" style="border:1px solid #39D69D" bindtap="fixedchoose4">周四</view>
+    <view class="fixitemct" wx:else style="border:1px solid #E1E1E1" bindtap="fixedchoose4">周四</view>
+    <view class="fixitemct" wx:if="{{dayselect5}}" style="border:1px solid #39D69D" bindtap="fixedchoose5">周五</view>
+    <view class="fixitemct" wx:else style="border:1px solid #E1E1E1" bindtap="fixedchoose5">周五</view>
+    <view class="fixitemct" wx:if="{{dayselect6}}" style="border:1px solid #39D69D" bindtap="fixedchoose6">周六</view>
+    <view class="fixitemct" wx:else style="border:1px solid #E1E1E1" bindtap="fixedchoose6">周六</view>
+    <view class="fixitemct" wx:if="{{dayselect7}}" style="border:1px solid #39D69D" bindtap="fixedchoose7">周日</view>
+    <view class="fixitemct" wx:else style="border:1px solid #E1E1E1" bindtap="fixedchoose7">周日</view>
+  </view>
+</view>
+<view class="dayRepeatShow" wx:else>
+  <view class="drselect">
+    <view class="subday" bindtap="subDay">
+      <view class="line"></view>
+    </view>
+    <view class="daynum">{{dayNum}}</view>
+    <view class="addday" bindtap="addDay">
+      <image class="add" src="../../img/icon_add.png"></image>
+    </view>
+  </view>
+</view>
+<view class="remind_time">
+  <view class="reminddata">提醒时间</view>
+  <picker mode="time" value="{{remind_time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+    <view class="time_picker">
+      {{remind_time}}
+    </view>
+  </picker>
+</view>
+<view class="clockIn_time">
+  <view class="clockIndata">打卡时间</view>
+  <view class="clocktime">
+    <picker mode="time" value="{{clockIn_time1}}" start="00:00" end="23:59" bindchange="bindTime1Change">
+      <view class="time_picker1">
+        {{clockIn_time1}}
+      </view>
+    </picker>-
+    <picker mode="time" value="{{clockIn_time2}}" start="00:00" end="23:59" bindchange="bindTime2Change">
+      <view class="time_picker2">
+        {{clockIn_time2}}
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="popnote">
+  <view class="popdata">完成打卡弹出打卡简记</view>
+  <view class="popbutton">
+    <view class="pbutton1" style="background:{{p1background}}" bindtap="pt1"></view>
+    <view class="pbutton2" style="background:{{p2background}}" bindtap="pt2"></view>
+  </view>
+</view>
+<view class="confirm" bindtap="confirm_button">确认</view>

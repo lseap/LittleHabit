@@ -9,13 +9,21 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.0",
 	"appid": "wx6da62114b4a99bf1",
-	"projectname": "%E5%B0%8F%E4%B9%A0%E6%83%AF",
+	"projectname": "LittleHabit",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

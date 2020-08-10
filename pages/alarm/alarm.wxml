@@ -5,20 +5,20 @@
 <view class="top">
 
   <!-- 选择音乐--左icon -->
-  <view class="select_Music_Box">
-    <image class="select_Music" src="../../image/icon_API.png"></image>
+  <view class="select_Music_Icon" bindtap="selectMusic">
+    <image class="select_Music" src="../../image/music_icon.png"></image>
   </view>
 
   <!-- 多标签选项卡 -->
   <view class="tab_Box">
     <view class="item1 tab_Item {{currentTab==0?'active':''}}" data-current="0" bindtap="switchNav">正计时</view>
     <view class="item2 tab_Item {{currentTab==1?'active':''}}" data-current="1" bindtap="switchNav">倒计时</view>
-    <view class="item3 tab_Item {{currentTab==2?'active':''}}" data-current="2" bindtap="switchNav">番茄钟</view>
+    <!-- <view class="item3 tab_Item {{currentTab==2?'active':''}}" data-current="2" bindtap="switchNav">番茄钟</view> -->
   </view>
 
   <!-- 数据统计--右icon -->
   <view class="data_Statistics_Box">
-    <image class="data_Statistics" src="../../image/icon_API.png"></image>
+    <image class="data_Statistics" src="../../image/data_icon.png" bindtap="data_Statistics"></image>
   </view>
 
 </view>
@@ -26,16 +26,86 @@
 
 <!-- 时钟图标部分 -->
 <view class="circle_Box">
-  <picker-view class="picker" indicator-class="indicator" mask-class="mask" value="{{pickerIndex}}">
+  <view class="zclock_box" wx:if="{{zclock}}">
+    <view class="zclock">{{zclock_min}}</view>
+    <view class="zclock char"> : </view>
+    <view class="zclock">{{zclock_second}}</view>
+  </view>
+  <picker-view class="picker" wx:if="{{dclock}}" indicator-class="indicator" mask-class="mask" value="{{pickerIndex}}" bindchange="bindchange">
     <picker-view-column>
-      <view wx:for="{{min}}">{{item}}</view>
+      <view wx:for="{{min}}" data-min="{{item}}">{{item}}</view>
     </picker-view-column>
     <picker-view-column>
-      <view wx:for="{{second}}">{{item}}</view>
+      <view wx:for="{{second}}" data-second="{{item}}">{{item}}</view>
     </picker-view-column>
   </picker-view>
-  <text class="time_text">:</text>
+  <text class="time_text" wx:if="{{dclock}}">:</text>
 </view>
 
 <!-- 选择习惯按钮 -->
-<button class="select_Habit" type="primary" size="mini">sss</button>
+<button class="select_Habit_btn" bindtap="selectHabit_btn" wx:if="{{!selected}}">可以选择要计时的习惯</button>
+
+<!-- 已选中习惯图标 -->
+<view class="selected_Habit_box" wx:if="{{selected}}" bindtap="seleted_Change">
+  <image class="selected_img" src="{{selectedHabit.img}}"></image>
+  <view class="selected_content">{{selectedHabit.content}}</view>
+</view>
+
+<!-- 开始按钮 -->
+<button class="begin" bindtap="begin" wx:if="{{begin_flag}}">开 始</button>
+<!-- 暂停按钮 -->
+<button class="pause" bindtap="pause" wx:if="{{pause_flag}}">暂 停</button>
+<!-- 结束or继续 按钮 -->
+<view class="end_or_continue_box" wx:if="{{end_or_continue_flag}}">
+  <view class="end_or_continue_flexbox">
+    <button class="end end_or_continue" bindtap="end">结 束</button>
+    <button class="continuebtn end_or_continue" bindtap="continuebtn">继 续</button>
+  </view>
+</view>
+
+<!-- 遮罩 -->
+<view class="btn_mask" wx:if="{{btn_mask}}"></view>
+
+<!-- 选择音乐框 -->
+<view class="selected_music_box" wx:if="{{select_Music_Box}}">
+    <view class="selected_music_title">请选择白噪音</view>
+    <view class="selected_music_content_box" data-selectedMusic="none" bindtap="snone">
+      <view class="selected_music_content">无</view>
+      <image class="selected_music" src="../../image/choosed.png" wx:if="{{none}}"></image>
+    </view>
+    <view class="selected_music_content_box" data-selectedMusic="sea" bindtap="ssea">
+      <view class="selected_music_content">海洋</view>
+      <image class="selected_music" src="../../image/choosed.png" wx:if="{{sea}}"></image>
+    </view>
+    <view class="selected_music_content_box" data-selectedMusic="morning" bindtap="smorning">
+      <view class="selected_music_content">清晨</view>
+      <image class="selected_music" src="../../image/choosed.png" wx:if="{{morning}}"></image>
+    </view>
+    <view class="selected_music_content_box" data-selectedMusic="field" bindtap="sfield">
+      <view class="selected_music_content">田野</view>
+      <image class="selected_music" src="../../image/choosed.png" wx:if="{{field}}"></image>
+    </view>
+    <view class="selected_music_content_box" data-selectedMusic="night" bindtap="snight">
+      <view class="selected_music_content">夜晚</view>
+      <image class="selected_music" src="../../image/choosed.png" wx:if="{{night}}"></image>
+    </view>
+</view>
+
+<!-- 选择习惯 -->
+<view class="select_Habit_box" wx:if="{{select_Habit_box}}">
+  <view class="select_Habit_title_box">
+    <view class="select_Habit_title">选择计时习惯</view>
+  </view>
+  <view class="select_Habit_icon_box">
+    <view class="select_Habit_icon_flexbox">
+      <view class="delete select_Habit_icon" bindtap="deleteSHabit">
+        <image class="select_Habit_icon_img" src="../../image/del_icon.png"></image>
+        <view class="select_Habit_icon_text">清空</view>
+      </view>
+      <view wx:for="{{habit}}" class="select_Habit_icon" bindtap="selectHabit" data-selected="{{item}}">
+        <image class="select_Habit_icon_img" src="{{item.img}}"></image>
+        <view class="select_Habit_icon_text">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>
